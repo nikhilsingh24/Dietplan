@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Grandstander&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+.bar {
+  height: 100vh;
+  display:flex;
+}
+.side-nav,
+.nav-menu {
+  height: 100%;
+}
+.side-nav .nav-menu {
+  list-style: none;
+  padding: 40px 0;
+  width: 200px;
+  background-color: #3498db;
+  border-right: 10px solid black;
+}
+.side-nav .nav-item {
+  position: relative;
+  padding: 20px;
+}
+.nav-item.active {
+  background-color: #fff;
+  box-shadow: 0px -3px rgba(0, 0, 0, 0.2), 0px 3px rgba(0, 0, 0, 0.2);
+}
+.nav-item.active a {
+  color: #2980b9;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #000;
+}
+.menu-text {
+  padding: 0 20px;
+}
+.nav-item:hover {
+    background-color: #fff;
+    color:black
+}
+.nav-item a:hover {
+    text-decoration: none;
+    color: #000;
+  }
+ 
+.profile-img{
+    width:100px;
+    margin:0 20px;
+}
+.title h1{
+    padding:20px 550px;
+    color: tomato;
+    font-style: italic;
+}
+.title-one h1{
+    padding:20px 520px;
+    color: tomato;
+    font-style: italic;
+}
+.user-details{
+    display: flex;
+  padding:15px 0;
+}
+.user-box{
+    padding: 40px 400px;
+ 
+}
+.user-card{
+    background: #fff;
+    box-shadow: 0px -1px 6px #DFDFDF, 0px 12.5216px 10.0172px rgba(92, 92, 92, 0.035), 0px 6.6501px 5.32008px rgba(92, 92, 92, 0.0282725), 0px 2.76726px 2.21381px rgba(92, 92, 92, 0.0196802);
+    border: 1px solid #DDDDDD;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px;
+}
+.box{
+    display: flex;
+}
