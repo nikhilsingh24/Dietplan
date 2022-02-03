@@ -24,6 +24,7 @@
         $result = mysqli_query($con, $query);
         $rows = mysqli_num_rows($result);
         if ($rows == 1) {
+            session_start(); 
             $_SESSION['username'] = $username;
             // Redirect to user dashboard page
             header("Location: profile.php");

@@ -6,10 +6,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
+    <title>Profile</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
@@ -29,6 +32,20 @@
     <link rel="stylesheet" href="./profile.css" />
   </head>
   <body>
+    <?php 
+    require('db.php');
+    session_start();
+    $username = $_SESSION['username'];
+    $query = "SELECT * FROM profile WHERE name = '$username'";
+    $result   = mysqli_query($con, $query);
+    $num_rows = mysqli_num_rows($result);
+    if($num_rows == 0){
+      header("Location: dashboard.php");
+    }
+    if($num_rows > 0){
+      while($row = $result->fetch_assoc()) {
+    ?>
+
     <div class="bar">
       <nav class="side-nav">
         <ul class="nav-menu">
@@ -53,29 +70,35 @@
           <a href="profileform.php">
             <i class="fa fa-pencil"></i>
           </a>
+          <a href="logout.php"  style="width: 112px;height: 37px;"lass="btn btn-info btn-lg">
+          <span class="glyphicon glyphicon-log-out"></span> Log out
+        </a>
         </div>
         <div class="user-box">
           <div class="user-card">
             <div class="user-details">
               <h4>Name:</h4>
-              <p>Nikhil</p>
+              <p><?php echo $username ?></p>
             </div>
 
             <div class="user-details">
-              <h4>age:</h4>
-              <p>24</p>
+              <h4>Age:</h4>
+              <p><?php echo $row["age"] ?></p>
             </div>
             <div class="user-details">
               <h4>Contact Number:</h4>
-              <p>1234567890</p>
+              <p><?php echo $row["phone"] ?></p>
             </div>
             <div class="user-details">
               <h4>Emergency contact:</h4>
-              <p>1234567890</p>
+              <p><?php echo $row["emergencycontact"] ?></p>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <?php  
+    }
+    } ?>
   </body>
 </html>
