@@ -49,48 +49,51 @@
     <div class="bar">
       <nav class="side-nav">
         <ul class="nav-menu">
+          <p style="font-family: uBrush Script MTset;color: yellow;font-size: 40px;margin-left: 12px;">Dietplan</p>
           <li>
             <img
               class="profile-img"
-              src="https://toppng.com/uploads/preview/file-svg-profile-icon-vector-11562942678pprjdh47a8.png"
-              alt="profile"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnjAhUGVOgiKOga2hLm45gjk3NlGB9e2iIPw&usqp=CAU"              alt="profile"
             />
           </li>
           <li class="nav-item">
-            <a href="#symptom"><span class="menu-text">Diet Plan</span></a>
+            <a href="dietform.php"><span class="menu-text">Diet Plan</span></a>
           </li>
           <li class="nav-item">
-            <a href="#profile"><span class="menu-text">Profile</span></a>
+            <a href="profile.php"><span class="menu-text">Profile</span></a>
           </li>
         </ul>
       </nav>
       <div class="title" id="#profile">
       <div class="box">
           <h1>Profile</h1>
+          <div style="position: absolute;
+    right: 120px;">
           <a href="profileform.php">
             <i class="fa fa-pencil"></i>
           </a>
-          <a href="logout.php"  style="width: 112px;height: 37px;"lass="btn btn-info btn-lg">
+          <a href="logout.php"  style="width: 112px;height: 37px; margin-top:26px;margin-left:15px;"lass="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-log-out"></span> Log out
         </a>
+      </div>
         </div>
         <div class="user-box">
           <div class="user-card">
             <div class="user-details">
-              <h4>Name:</h4>
+              <h4><b>Name: </b></h4>
               <p><?php echo $username ?></p>
             </div>
 
             <div class="user-details">
-              <h4>Age:</h4>
+              <h4><b>Age: </b></h4>
               <p><?php echo $row["age"] ?></p>
             </div>
             <div class="user-details">
-              <h4>Contact Number:</h4>
+              <h4><b>Contact Number: </b></h4>
               <p><?php echo $row["phone"] ?></p>
             </div>
             <div class="user-details">
-              <h4>Emergency contact:</h4>
+              <h4><b>Emergency contact: </b></h4>
               <p><?php echo $row["emergencycontact"] ?></p>
             </div>
           </div>

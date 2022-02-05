@@ -35,9 +35,9 @@
 <body>
     <div class="form">
         <p>Hey, <?php echo $_SESSION['username']; ?>!</p>
-        <p>You are now user Dietplan.</p>
+        <p>You are now user of Dietplan.</p>
         <a href="newprofile.php">
-            <i class="fa fa-pencil"></i>
+            <i class="fa fa-pencil"> Please enter your details to continue</i>
           </a>
         <p><a href="logout.php">Logout</a></p>
     </div>
