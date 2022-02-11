@@ -62,6 +62,15 @@
           <li class="nav-item">
             <a href="profile.php"><span class="menu-text">Profile</span></a>
           </li>
+          <li class="nav-item">
+            <span style="color:white;" class="menu-text" onclick="openLink()">Live Updates</span>
+          </li>
+          <li class="nav-item">
+            <a href="profile.php" onclick="openLink2()"><span class="menu-text">Covid Test</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="profile.php" onclick="openLink3()"><span class="menu-text">Precautions</span></a>
+          </li>
         </ul>
       </nav>
       <div class="title" id="#profile">
@@ -103,5 +112,16 @@
     <?php  
     }
     } ?>
+    <script>
+        function openLink() {
+          window.open("https://www.worldometers.info/coronavirus/");
+        }
+        function openLink2() {
+          window.open("https://selfregistration.cowin.gov.in/");
+        }
+        function openLink3() {
+          window.open("https://health.mo.gov/living/healthcondiseases/communicable/novel-coronavirus/prevention.php");
+        }
+      </script>
   </body>
 </html>

@@ -1,0 +1,158 @@
+* {
+    font-family: Montserrat;
+}
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background: aliceblue;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background: url('images/2.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#app {
+    display: flex;
+    height: 550px;
+    width: 380px;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px -1px 6px #DFDFDF, 0px 12.5216px 10.0172px rgba(92, 92, 92, 0.035), 0px 6.6501px 5.32008px rgba(92, 92, 92, 0.0282725), 0px 2.76726px 2.21381px rgba(92, 92, 92, 0.0196802);
+}
+
+#app > h1 {
+    text-align: center;
+    height: 60px;
+    width: 380px;
+    border-bottom: 1px solid #2691d4;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
+    width: 380px;
+}
+
+#name, #pass {
+  border: none;
+  border-bottom: 1px solid grey;
+  width: 80%;
+  outline: none;
+  font-size: 16px;
+  margin: 15px 20px 20px 20px;
+  padding-bottom: 10px;
+}
+
+#forgot {
+    width: 100%;
+    padding-left: 75px;
+    margin: 0px 0px 20px 0px;
+}
+
+#forgot > a {
+    text-decoration: none;
+    color: rgb(121, 121, 121);
+}
+
+#forgot > a:hover {
+    text-decoration: underline;
+}
+
+#login {
+    width: 100px;
+    height: 65px;
+ 
+    background-color: #2691d4;
+    color: aliceblue;
+    font-size: 16px;
+    margin: 0px 0px 20px 0px;
+    font-weight: bold;
+    border: none;
+    cursor:pointer;
+    padding: 8px;
+    
+}
+#login-one{
+    width: 100px;
+    height: 65px;
+ 
+background:#fff;
+    color: #000;
+    font-size: 16px;
+    margin: 0px 0px 20px 0px;
+    font-weight: bold;
+    border: 1px solid #2691d4;
+    cursor:pointer;
+    padding: 8px;
+    margin-right: 10px;
+    
+}
+
+#login:hover {
+    border: 2px solid black;
+} 
+
+#signup {
+    margin: 0px 0px 20px 0px;
+    color: rgb(97, 97, 97);
+}
+
+#signup > a {
+    text-decoration: none;
+    color: #2691d9;
+}
+
+#signup > a:hover {
+    text-decoration: underline;
+}
+
+.error {
+    margin-top: 30px;
+}
+
+@media (max-width: 400px) {
+
+    #app {
+        height: 320px;
+        width: 280px;
+    }
+
+    #app > h1 {
+        font-size: 20px;
+        width: 280px;
+    }
+
+    #name, #pass {
+        width: 250px;
+        font-size: 10px;
+    }
+
+    #forgot {
+        margin-left: 55px;
+        font-size: 10px;
+    }
+
+    #login {
+        width: 200px;
+        height: 25px;
+        font-size: 12px;
+    }
+
+    #signup {
+        font-size: 10px;
+    }
+}
