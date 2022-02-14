@@ -19,7 +19,7 @@
   </head>
   <body>
   <?php
-  include "../login.php";
+  include "../index.php";
   if(!empty($_POST)) {
             session_start();
             $username =  $_SESSION['username'];
